@@ -59,20 +59,22 @@ var swiper = new Swiper(".mySwiper", {
 // Hamburger menu btn
 
 // Open Nav bar
+
+var closeNavBtn = document.querySelector('#nav-toggle-close');
+window.onload = () => {
+    closeNavBtn.style.display = 'none';
+};
+
 window.addEventListener("load", function () {
     const nav = document.querySelector('.btn-links');
     const openNavBtn = document.querySelector('#nav-toggle-open');
-    const closeNavBtn = document.querySelector('#nav-toggle-close');
-
-
-
+    
     const openNav = () => {
         nav.style.display = 'flex';
         openNavBtn.style.display = 'none';
         closeNavBtn.style.display = 'inline-block';
     }
     openNavBtn.addEventListener('click', openNav);
-
 
     // Close Nav bar
 
@@ -87,8 +89,6 @@ window.addEventListener("load", function () {
         navLink.addEventListener('click', closeNav);
     });
 });
-
-
 
 
 // For Image Zoom and Out

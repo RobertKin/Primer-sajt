@@ -26,7 +26,7 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: '.swiper-button-prev',
     },
     autoplay: {
-        delay: 3000,
+        delay: 2800,
     },
     pagination: {
         el: ".swiper-pagination",
@@ -46,8 +46,15 @@ var swiper = new Swiper(".mySwiper", {
             slidesPerView: 4,
             spaceBetween: 30
         }
-    }
+        
+    },  effect: 'coverflow',
+  coverflowEffect: {
+    rotate: 25,
+    slideShadows: false,
+  }
+    
 });
+
 
 // Hamburger menu btn
 
